@@ -1,17 +1,16 @@
-
+//import React from 'react';
 import React, { useState, useEffect } from 'react'
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import StatusCards from './StatusCards'
+//import StatusCards from './StatusCards'
 import SelectCountry from './SelectCountry';
-import Graphs from './Graphs';
 
-//import Map from './Map';
 
-import { Grid, Typography, Paper } from '@material-ui/core';
 
-import styles from './Circles.module.css';
+import { Grid } from '@material-ui/core';
+
+//import styles from './Circles.module.css';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function Circles() {
+function DropDown() {
     const mainClass = useStyles();
     let [globalData, setGlobalData] = useState(null)
     let fetchResponse = null
@@ -60,25 +59,17 @@ function Circles() {
     //export default  function Circles() {
 
     return (
-        <div className={styles.dropDown}>
-            <div>
-                <Grid container justify="center">
-                    <Grid item xs={12}>
-                        <SelectCountry onChange={(value) => getCountry(country = value)} />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <StatusCards data={globalData} />
-                    </Grid>
-                    <Grid item xs={5} className={styles.graph}>
-                        <Typography variant="h6" component="h6" gutterBottom>
-                            <p>Covid-19 {country} Historical Data</p>
-                        </Typography>
-                        <Graphs countryName={country} />
-                    </Grid>
+        <div className={mainClass.root}>
+            <Grid container spacing={3} className={mainClass.rootGrid}>
+                <Grid item xs={12}>
+                    <SelectCountry onChange={(value) => getCountry(country = value)} />
                 </Grid>
-            </div>
+                {/*<Grid item xs={12} className={mainClass.selectGraph}>
+                    <Graphs countryName={country} />
+                </Grid>*/}
+            </Grid>
         </div>
     );
 }
 
-export default Circles;
+export default DropDown;

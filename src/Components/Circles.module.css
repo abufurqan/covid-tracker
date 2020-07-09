@@ -1,5 +1,9 @@
 body{
-    background:radial-gradient(circle, rgba(23, 52, 69, 0.9), rgba(39, 174, 96, 0.0)), url(././../images/covid19_bg.jpg);
+    /*background:steelblue;
+    background: darkslategray;*/
+    /*background: rgba(23, 52, 69, 0.25);*/
+    /*background:linear-gradient(45deg, rgba(23, 52, 69, 0.5), rgba(39, 174, 96, 0.5)), url(././../images/covid19_bg2.jpg);*/
+    background:radial-gradient(circle, rgba(23, 52, 69, 0.5), rgba(39, 174, 96, 0.5)), url(././../images/covid19_bg2.jpg);
     background-position: top center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -17,6 +21,10 @@ body{
   .dropDown {
     z-index: 1;
     margin-top: 130px;
+  }
+
+  .makeStyles-formControl-3 {
+    /*max-width: 150px !important;*/
   }
 
   select {
@@ -69,7 +77,7 @@ body{
     transform: translateY(5%);
   }
   
-  .circleContainer .deg1, .deg2, .deg3, .deg5, .deg6, .deg7, .degFlagg {
+  .circleContainer .deg1, .deg2, .deg3, .deg4, .deg5, .deg6, .deg7 {
       display: block;
       border: 0px solid rgba(0, 0, 0, 0.1);
       border-radius:50%;
@@ -80,31 +88,23 @@ body{
   .deg1 p{
     color: rgba(0, 0, 0, 0.65);
   }
-
-  .degFlag1 {
-    background-color: rgb(255, 255, 255);
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    margin: -100px 0 0px -80px;
-  }
-  .degFlag img {
-    width: 40px;
-    margin: 75px auto;
-  }
   
   .deg1 {
     grid-column:3 / span 2;
     grid-row: 1 /span 2;
+    /*background-color: rgb(0, 0, 255);*/
+    /*background: #1b9aaa;*/
     background-color: rgb(255, 255, 255);
     width: 200px;
     height: 200px;
     border-radius: 50%;
     color: rgba(0, 0, 0, 0.87) !important;
+    /*background: linear-gradient(180deg, #27ae60 0%, #27ae60 50%, #ef476f 50%, #ef476f 100%);*/
   }
   .deg2 {
     grid-column:1 / span 2;
     grid-row: 2 /span 2;
+    /*background-color: rgb(73, 0, 182);*/
     background: #8e44ad;
     width: 200px;
     height: 200px;
@@ -113,6 +113,7 @@ body{
   .deg3 {
     grid-column:5 / span 2;
     grid-row: 2 /span 2;
+    /*background-color: rgb(255, 157, 0);*/
     background: #f39c12;
     width: 200px;
     height: 200px;
@@ -121,16 +122,18 @@ body{
   .deg4 {
     grid-column:3 / span 2;
     grid-row: 3 /span 2;
+    /*background-color: rgb(255, 255, 255);*/
     border: none;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.2), 20px 20px 1000px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0px 0px 16px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
   }
   .deg5 {
     grid-column:1 / span 2;
     grid-row: 4 /span 2;
+    /*background-color: rgb(0, 103, 0);*/
     background: #27ae60;
     width: 200px;
     height: 200px;
@@ -139,6 +142,7 @@ body{
   .deg6 {
     grid-column:5 / span 2;
     grid-row: 4 /span 2;
+    /*background-color: rgb(255, 0, 0);*/
     background: #ef476f;
     width: 200px;
     height: 200px;
@@ -151,6 +155,7 @@ body{
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    /*background: linear-gradient(180deg, #27ae60 0%, #27ae60 50%, #ef476f 50%, #ef476f 100%);*/
   }
   
   .deg7 .MuiCardContent-root {

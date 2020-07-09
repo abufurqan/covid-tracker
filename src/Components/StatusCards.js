@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react'
-
 import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CountUp from 'react-countup';
-
 import styles from './Circles.module.css';
-
 import logo from '././../images/covid19_logo.png'
 
 
 
 function StatusCards(props) {
+
+    //const classes = useStyles();
 
     let [infected, setInfected] = useState(0)
     let [todayCases, setTodayCases] = useState(0)

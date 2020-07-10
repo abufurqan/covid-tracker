@@ -1,0 +1,41 @@
+.MuiSelect-outlined.MuiSelect-outlined {
+    padding-right: 12px !important;
+  }
+
+.MuiSelect-iconOutlined {
+    width: 0 !important;
+    display: none !important;
+}
+
+.MuiSelect-select {
+    min-width: 120px !important;
+}
+
+body{
+    background: linear-gradient(207deg, #246655, #662424);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 20s ease infinite;
+    -moz-animation: AnimationName 20s ease infinite;
+    -o-animation: AnimationName 20s ease infinite;
+    animation: AnimationName 20s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 720%}
+    50%{background-position:100% 29%}
+    100%{background-position:0% 72%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 720%}
+    50%{background-position:100% 29%}
+    100%{background-position:0% 72%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 720%}
+    50%{background-position:100% 29%}
+    100%{background-position:0% 72%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 720%}
+    50%{background-position:100% 29%}
+    100%{background-position:0% 72%}
+}

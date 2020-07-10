@@ -1,0 +1,28 @@
+.MuiSelect-outlined .MuiSelect-outlined {
+    padding-right: 12px !important;
+  }
+
+.MuiSelect-iconOutlined {
+    width: 0 !important;
+    display: none !important;
+}
+
+.MuiFormControl-fullWidth {
+    max-width: 120px !important;
+}
+
+.MuiAutocomplete-root > .MuiAutocomplete-hasClearIcon > .MuiAutocomplete-hasPopupIcon {
+    padding-right: 38px !important;
+    max-width: 150px !important;
+}
+.MuiAutocomplete-root {
+    width: 120px !important;
+}
+
+.MuiAutocomplete-hasClearIcon {
+    width: 120px !important;
+}
+
+.MuiAutocomplete-hasPopupIcon {
+    width: 120px !important;
+}

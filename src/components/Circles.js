@@ -1,26 +1,16 @@
 
 import React, { useState, useEffect } from 'react'
 
-import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Typography } from '@material-ui/core';
 
 import StatusCards from './StatusCards'
 import SelectCountry from './SelectCountry';
 import Graphs from './Graphs';
 
-//import Map from './Map';
-
-import { Grid, Typography, Paper } from '@material-ui/core';
-
 import styles from './Circles.module.css';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
-}));
 
 function Circles() {
-    const mainClass = useStyles();
     let [globalData, setGlobalData] = useState(null)
     let fetchResponse = null
     let [timer, setTimer] = useState(0)
@@ -43,6 +33,7 @@ function Circles() {
     useEffect(() => {
 
         const getGlobalData = async () => {
+
             try {
                 fetchResponse = await fetch(api)
                 setGlobalData(
@@ -57,7 +48,6 @@ function Circles() {
         getGlobalData()
     }, [timer, country])
 
-    //export default  function Circles() {
 
     return (
         <div className={styles.dropDown}>

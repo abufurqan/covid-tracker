@@ -1,83 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import Grid from '@material-ui/core/Grid';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import React from 'react'
+
+import { CardContent, Typography, Grid } from '@material-ui/core';
 import CountUp from 'react-countup';
-import styles from './Circles.module.css';
-import logo from '././../images/covid19_logo.png'
+import styles from './Cards.module.css';
+import logo from './../../images/covid19_logo.png';
 
+const Cards = ({summaryData}) => {
 
+  const { confirmed, todayCases, recovered, todayRecovered, deaths, todayDeaths, active, critical, lastUpdate } = summaryData;
 
-function StatusCards(props) {
+  if (!confirmed) {
+    return 'Loading...';
+  }
 
-    //const classes = useStyles();
+  let recoveryRate = [(recovered / confirmed)*100];
+  let deathRate = [(deaths / confirmed)*100];
 
-    let [infected, setInfected] = useState(0)
-    let [todayCases, setTodayCases] = useState(0)
-    let [active, setActive] = useState(0)
-    let [critical, setCritical] = useState(0)
-    let [recovered, setRecovered] = useState(0)
-    let [todayRecovered, setTodayRecovered] = useState(0)
-    let [recoveryRate, setRecoveryRate] = useState(0)
-    let [deaths, setDeaths] = useState(0)
-    let [todayDeaths, setTodayDeaths] = useState(0)
-    let [deathRate, setDeathRate] = useState(0)
-    let [formateDate, setFormateDate] = useState(null)
+  return (
 
-    useEffect(() => {
-
-        if (props.data !== null) {
-
-            console.log(props.data)
-
-            setInfected(
-                infected = props.data.cases
-            )
-            setTodayCases(
-                todayCases = props.data.todayCases
-            )
-            setActive(
-                active = props.data.active
-            )
-            setCritical(
-                critical = props.data.critical
-            )
-            setRecovered(
-                recovered = props.data.recovered
-            )
-            setTodayRecovered(
-                todayRecovered = props.data.todayRecovered
-            )
-            setRecoveryRate(
-                recoveryRate = props.data.recovered/props.data.cases*100
-            )
-            setDeaths(
-                deaths = props.data.deaths
-            )
-            setTodayDeaths(
-                todayDeaths = props.data.todayDeaths
-            )
-            setDeathRate(
-                deathRate = props.data.deaths/props.data.cases*100
-            )
-            setFormateDate(
-                formateDate = new Date(props.data.updated).toDateString()
-            )
-        }
-
-    }, [props.data])
-
-
-    let showThisDate = null
-    if (formateDate == null) {
-        showThisDate = "..."
-    }
-    else {
-        showThisDate = formateDate
-    }
-
-
-    return (
+    <div>
         <div>
             <Grid container spacing={3} style={{
                 display: 'flex',
@@ -90,7 +31,8 @@ function StatusCards(props) {
                     <div className={styles.deg1}>
                         <CardContent className={styles.CardContent}>
                             <Typography variant="h6" component="p">
-                                Last Update<br />{showThisDate}
+                            Last Updated <br />
+                            { new Date(lastUpdate).toDateString() }
                             </Typography>
                         </CardContent>
                     </div>
@@ -102,7 +44,7 @@ function StatusCards(props) {
                             <Typography variant="h4" component="h2" gutterBottom>
                                 <CountUp
                                     start={0}
-                                    end={infected}
+                                    end={confirmed}
                                     duration={3}
                                     separator=","
                                 />
@@ -147,12 +89,7 @@ function StatusCards(props) {
                         </CardContent>
                     </div>
                     <div className={styles.deg4}>
-                        <img src={logo} alt="covid-19 logo" style={{
-                            width: 200,
-                            marginLeft: 'auto',
-                            marginRight: 'auto'
-
-                        }} />
+                        <img className={styles.logo} src={logo} alt="COVID-19" />
                     </div>
                     <div className={styles.deg5}>
                         <CardContent className={styles.CardContent}>
@@ -235,8 +172,11 @@ function StatusCards(props) {
                 </div>
                 </div>
             </Grid>
-        </div>
-    )
+            </div>
+            </div>
+
+)
+
 }
 
-export default StatusCards;
+export default Cards;

@@ -24,11 +24,11 @@ const Countries = ({handleChangeCountry}) => {
     <Grid container spacing={3} justify="center"  >
       <FormControl >
         <Autocomplete
+          className={styles.formAutocomplete}
           id="country-selection"
           onChange={(event, value) => handleChangeCountry(value)}
           options={countries}
           getOptionLabel={(countries) => countries}
-          style={{ width: 150, }}
           renderInput={(countries) => <TextField {...countries} label="Select Country" variant="outlined" />}
         />
       </FormControl>

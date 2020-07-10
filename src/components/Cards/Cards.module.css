@@ -77,6 +77,10 @@ body{
       box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 0, 0, 0.2) inset;
   }
 
+  .deg1, .deg2, .deg3, .deg4, .deg5, .deg6, .deg7 {
+    width: 200px;
+    height: 200px;
+  }
   .deg1 p{
     color: rgba(0, 0, 0, 0.65);
   }
@@ -93,8 +97,6 @@ body{
     grid-column:3 / span 2;
     grid-row: 1 /span 2;
     background-color: rgb(255, 255, 255);
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
     color: rgba(0, 0, 0, 0.87) !important;
   }
@@ -102,24 +104,18 @@ body{
     grid-column:1 / span 2;
     grid-row: 2 /span 2;
     background: #8e44ad;
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
   }
   .deg3 {
     grid-column:5 / span 2;
     grid-row: 2 /span 2;
     background: #f39c12;
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
   }
   .deg4 {
     grid-column:3 / span 2;
     grid-row: 3 /span 2;
     border: none;
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
     box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.1);
     box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.2), 20px 20px 1000px rgba(0, 0, 0, 0.5) inset;
@@ -128,24 +124,18 @@ body{
     grid-column:1 / span 2;
     grid-row: 4 /span 2;
     background: #27ae60;
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
   }
   .deg6 {
     grid-column:5 / span 2;
     grid-row: 4 /span 2;
     background: #ef476f;
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
   }
   .deg7 {
     grid-column:3 / span 2;
     grid-row: 5 /span 2;
     background-color: rgb(255, 255, 255);
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
   }
   
@@ -160,3 +150,74 @@ body{
   .deg3, .deg6{margin: 0 1em 0 -1.5em}
   .deg4{margin: -6em 0em 0 0em;}
   */
+
+@media only screen and (max-width: 600px) {
+  .deg1, .deg2, .deg3, .deg4, .deg5, .deg6, .deg7 {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .circleContainer {
+    width: 420px;
+    height: 420px;
+  }
+  .deg1, .deg2, .deg3, .deg4, .deg5, .deg6, .deg7 {
+    width: 135px;
+    height: 135px;
+  }
+  .deg4 img {
+    width: 135px;
+  }
+  h2{
+    font-size: 20px !important;
+  }
+  h5{
+    font-size: 16px !important;
+  }
+  p {
+    font-size: 14px !important;
+  }
+  .txtRecover {
+    margin-top: 0px !important;
+  }
+  .MuiInputBase-root > .MuiOutlinedInput-root >
+  .MuiAutocomplete-inputRoot > .MuiInputBase-fullWidth >
+  .MuiInputBase-formControl > .MuiInputBase-adornedEnd >
+  .MuiOutlinedInput-adornedEnd {
+    width: 50px !important;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .circleContainer {
+    width: 385px;
+    height: 385px;
+  }
+  .deg1, .deg2, .deg3, .deg4, .deg5, .deg6, .deg7 {
+    width: 125px;
+    height: 125px;
+  }
+  .deg4 img {
+    width: 125px;
+  }
+  h2{
+    font-size: 18px !important;
+  }
+  h5{
+    font-size: 15px !important;
+  }
+  p {
+    font-size: 13px !important;
+  }
+  .txtRecover {
+    margin-top: 0px !important;
+  }
+  .MuiInputBase-root > .MuiOutlinedInput-root >
+  .MuiAutocomplete-inputRoot > .MuiInputBase-fullWidth >
+  .MuiInputBase-formControl > .MuiInputBase-adornedEnd >
+  .MuiOutlinedInput-adornedEnd {
+    width: 50px !important;
+  }
+}

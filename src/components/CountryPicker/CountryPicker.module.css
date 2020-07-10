@@ -26,3 +26,47 @@
 .MuiAutocomplete-hasPopupIcon {
     width: 120px !important;
 }
+
+.formAutocomplete {
+    width: 150px;
+}
+
+@media only screen and (max-width: 375px) {
+    .MuiSelect-outlined .MuiSelect-outlined {
+        padding-right: 12px !important;
+      }
+    
+    .MuiSelect-iconOutlined {
+        width: 0 !important;
+        display: none !important;
+    }
+    
+    .MuiFormControl-fullWidth {
+        max-width: 90px !important;
+    }
+    .MuiAutocomplete-hasPopupIcon > .MuiAutocomplete-hasClearIcon >
+    .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+        padding-right: 10px !important;
+        max-width: 90px !important;
+    }
+    
+    .MuiAutocomplete-root > .MuiAutocomplete-hasClearIcon > .MuiAutocomplete-hasPopupIcon {
+        padding-right: 10px !important;
+        max-width: 90px !important;
+    }
+    .MuiAutocomplete-root {
+        width: 900px !important;
+    }
+    
+    .MuiAutocomplete-hasClearIcon {
+        width: 120px !important;
+    }
+    
+    .MuiAutocomplete-hasPopupIcon {
+        width: 90px !important;
+    }
+    
+    .formAutocomplete {
+        width: 150px;
+    }
+}

@@ -78,13 +78,13 @@ const Chart = (props) => {
   return (
     <div className={styles.gridContainer}>
       <Grid container spacing={3} justify="center" >
-        <Grid item xs={12} md={8} >
+        <Grid item xs={6} md={6} >
           <Card>
             <Typography variant="h5" component="h5" align="center"> Infected, Recovered & Deaths </Typography>
             {barChart}
           </Card>
         </Grid>
-        <Grid item xs={12} md={8} >
+        <Grid item xs={6} md={6} >
           <Card>
             <Typography variant="h5" component="h5" align="center"> Worldwide Daily Statistics </Typography>
             {lineChart}
